@@ -33,11 +33,9 @@ class CurrencyViewController: UIViewController, UITableViewDelegate, UITableView
 
             do {
                 self.result = try JSONDecoder().decode(Between.self, from: data)
-                
-                if self.result!.rates.count != nil {
-                    self.numberOfRows = self.result!.rates.count
-                }
-                
+
+                self.numberOfRows = self.result!.rates.count
+
                 DispatchQueue.main.sync {
                 completed()
                     
@@ -69,9 +67,9 @@ class CurrencyViewController: UIViewController, UITableViewDelegate, UITableView
             cell.effectiveDate?.text = result?.rates[indexPath.row].effectiveDate
 
             if result?.rates[indexPath.row].mid != nil {
-                cell.midValue?.text = String(format: "%.4f", result?.rates[indexPath.row].mid as! CVarArg)
+                cell.midValue?.text = String(format: "%.4f", result?.rates[indexPath.row].mid ?? 0.0)
             } else {
-                cell.midValue?.text = String(format: "%.4f", result?.rates[indexPath.row].bid as! CVarArg)
+                cell.midValue?.text = String(format: "%.4f", result?.rates[indexPath.row].bid ?? 0.0)
             }
         }
         

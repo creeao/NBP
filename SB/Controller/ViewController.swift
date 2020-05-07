@@ -56,10 +56,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 
                 self.valuesOfTable = try JSONDecoder().decode([Table].self, from: data!)
                 
-                // Wypisanie ilości wierszy - nie znalazłem lepszego sposobu
-                if self.valuesOfTable[0].rates.count != nil {
-                    self.numberOfRows = self.valuesOfTable[0].rates.count
-                }
+                self.numberOfRows = self.valuesOfTable[0].rates.count
                 
                 DispatchQueue.main.sync {
                 completed()
@@ -103,7 +100,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         //Kolor tła komórki
         let bgColorView = UIView()
-        bgColorView.backgroundColor = #colorLiteral(red: 0.9119691253, green: 0.9121671319, blue: 0.9271816611, alpha: 1)
+        bgColorView.backgroundColor = UIColor(named: "SelectedCell") 
         cell.selectedBackgroundView = bgColorView
         
         indicatorTable.stopAnimating()
@@ -127,7 +124,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         performSegue(withIdentifier: "showDetails", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
 
     }
     //Preprzesłanie danych do ekranu waluty
