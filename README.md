@@ -6,6 +6,4 @@
 The application shows the current exchange rates of many currencies in relation to PLN.
 	
 ## What did I use?
-Fetch data's from NBP APIs. </br>
-Use UITableView.</br>
-Use UIDatePicker.
+Fetch data's from NBP APIs, use UITableView and UIDatePicker.
