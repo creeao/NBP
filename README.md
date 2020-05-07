@@ -1,7 +1,6 @@
 # NBP
 ## Table of contents
-![GitHub Logo](https://i.ibb.co/wLCT8h6/z.png){:height="50%" width="50%"}
-<img src="https://i.ibb.co/wLCT8h6/z.png" width="200">
+<img src="https://i.ibb.co/wLCT8h6/z.png" width="250">
 
 ## General info
 This project is simple Lorem ipsum dolor generator.
