@@ -1,6 +1,6 @@
 # NBP
 ## Table of contents
-![GitHub Logo](https://4lans.pl/161-thickbox_default/spoko-wear.jpg)
+![GitHub Logo](https://i.ibb.co/wLCT8h6/z.png)
 
 ## General info
 This project is simple Lorem ipsum dolor generator.
